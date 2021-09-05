@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+
+
+
+<section class="services" id="services">
+
+    <h1 class="heading"> Services <span>Avaliable</span> </h1><br>
+    <h1 class="heading"> Mobile & Electricity Bill Payments Services <span>Are Enabled Only</span> </h5><br>
+
+
+
+    <div class="box-container">
+        
+        
+            <div class="box">
+                <a href="{% url 'mobile_recharge'%}">
+                    <i class="fas fa-mobile"></i>
+                    <h3>Mobile</h3>
+                </a>
+                <!-- <p>+123-456-7890</p> -->
+            </div>
+     
+            <div class="box">
+                <a href="{% url 'electricity_recharge'%}">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Electricity Bill</h3>
+                </a>
+                <!-- <p>mumbai, india - 400104</p> -->
+            </div>
+            
+        <div class="box">
+            <a href="{% url 'dth_recharge'%}">
+                <i class="fas fa-satellite-dish"></i>
+                <h3>DTH</h3>
+            </a>
+            <!-- <p>example@gmail.com</p> -->
+        </div>
+
+        <div class="box">
+            <a href="{% url 'credit_recharge'%}">
+                <i class="fas fa-credit-card"></i>
+                <h3>Credit Card</h3>
+            </a>
+            <!-- <p>mumbai, india - 400104</p> -->
+        </div>
+
+        <div class="box">
+            <a href="{% url 'metro_recharge'%}">
+                <i class="fas fa-subway"></i>
+                <h3>Metro Card</h3>
+            </a>
+            <!-- <p>mumbai, india - 400104</p> -->
+        </div>
+
+        <div class="box">
+            <a href="{% url 'water_recharge'%}">
+                <i class="fas fa-water"></i>
+                <h3>Water Bill</h3>
+            </a>
+            <!-- <p>mumbai, india - 400104</p> -->
+        </div>
+
+
+        <div class="box">
+            <a href="{% url 'cylinder_pay'%}">
+                <img class="icon-image" src="{% static 'image\gas-cylinder.png'%}" alt="gas-cylinder">
+                <h3>Gas Bill</h3>
+            </a>
+            <!-- <p>mumbai, india - 400104</p> -->
+        </div>
+
+        <div class="box">
+            <a href="{% url 'fast_toll_recharge'%}">
+                <img class="icon-image"src="{% static 'image\toll-road.png'%}" alt="toll-road">
+                <h3>Fast Tag</h3>
+            </a>
+            <!-- <p>mumbai, india - 400104</p> -->
+        </div>
+
+        <div class="box">
+            <a href="{% url 'broad_band_recharge'%}">
+                <img class="icon-image" src="{% static 'image\wifi.png'%}" alt="wifi">
+                <h3>Broad Band</h3>
+            </a>
+            <!-- <p>mumbai, india - 400104</p> -->
+        </div>
+
+    </div>
+</section>
+
+
+{%endblock%}

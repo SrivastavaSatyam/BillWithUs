@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+
+
+
+<section class="contact">
+    <div class="row">
+        <div class="col">
+            <form action="/services/electricity-recharge" method="POST">
+              {% csrf_token %}
+                <div class="p-2 form-group">
+                  <select class="form-select" name="state" aria-label="Default select example">
+                    <option selected>Select State</option>
+                    <option value="1">Jammu & Kashmir</option>
+                    <option value="2">Andhra Pradesh</option>
+                    <option value="3">Assam</option>
+                    <option value="3">Bihar</option>
+                    <option value="3">Chattisgarh</option>
+                    <option value="3">Chandigarh</option>
+                    <option value="3">Delhi</option>
+                    <option value="3">Goa</option>
+                    <option value="3">Gujrat</option>
+                    <option value="3">Haryana</option>
+                    <option value="3">Maharashtra</option>
+                    <option value="3">Bihar</option>
+                    <option value="3">Uttar Pradesh</option>
+                    <option value="3">Uttrakhand</option>
+
+
+                    <input id="detail" name="account_no" type="phone-number" name="number" placeholder="Please Enter Your 10 Digits Account Number: ">
+                    
+                    </select>
+                </div>
+                <!-- <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <span class="input-group-text">.00</span>
+                  </div> -->
+
+                  <button class="btn"> SUBMIT </button>
+            </form>
+            <div class="alert alert-warning" role="alert">
+              {{coupon}}
+            </div>
+            <div class="alert alert-danger" role="alert">
+              {{tdisc}} {{tbill}}
+            </div>
+            <div class="alert alert-success" role="alert">
+              {{bdisc}} {{bbill}}              
+            </div>
+        </div>
+
+        <div class="col">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'image\banner-1.png'%}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'image\banner-2.jpg'%}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'image\banner-1.png'%}" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            
+        </div>
+        
+    </div>
+
+
+</section>
+{%endblock%}

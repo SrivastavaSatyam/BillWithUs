@@ -1,0 +1,41 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Bill With Us</title>
+    <link rel="stylesheet" href="{% static 'style/style.css'%}">
+
+</head>
+<body>
+
+    <header>
+
+        <div id="menu" class="fas fa-bars"></div>
+    
+        <nav class="navbar">
+            <a href="/">home</a>
+            <a href="{% url 'about'%}">about</a>
+            <a href="{% url 'services'%}">services</a>
+            <a href="#portfolio">portfolio</a>
+            <a href="#contact">contact</a>
+        </nav>
+    
+    
+    </header>
+    {%block content%}
+    {%endblock%}
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="{% static 'script/script.js'%}"></script>
+
+</body>
+</html>

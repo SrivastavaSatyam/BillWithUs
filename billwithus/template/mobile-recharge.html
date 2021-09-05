@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{%load static%}
+{%block content%}
+
+
+
+<section class="contact">
+    <div class="row">
+        <div class="col">
+            <form action="/services/mobile-recharge" method="POST">
+             {% csrf_token %}
+                <div class="raio-group fs-3">
+                    <input type="radio" id="Pre Paid" name="recharge_type" value="Pre Paid">
+                    <label for="Pre Paid">PrePaid</label>
+                    <input type="radio" id="Post Paid" name="recharge_type" value="Post Paid">
+                    <label for="Post Paid">Post Paid</label>
+                </div>
+                <div class="form-group">
+                    <input id="detail" type="phone-number" name="number" placeholder="Enter 10 Digits Mobile Number">
+                    <select class="form-select" name="operator" aria-label="Default select example">
+                        <option   selected>Choose the operator</option>
+                        <option  value="One">JIO</option>
+                        <option  value="Two">Airtel</option>
+                        <option  value="Three">VI</option>
+                        <option  value="Four">BSNL</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text fs-3">₹</span>
+                    <input name="amount" type="text" class="form-control" name="amount" aria-label="Amount (to the nearest rupee)">
+                    <span class="input-group-text fs-3">.00</span>
+                  </div>
+
+                  <button class="btn"> SUBMIT </button>
+            </form>
+
+          </div>
+          <div class="alert alert-primary" role="alert">
+            {{coupon}}<br>
+          </div>
+
+        <div class="col">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'image\banner-1.jpg'%}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'image\banner-2.jpg'%}" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'image\banner-1.jpg'%}" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            
+        </div>
+
+    </div>
+
+
+
+</section>
+{%endblock%}
